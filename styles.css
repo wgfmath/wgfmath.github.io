@@ -28,15 +28,18 @@ a {
 }
 
 .download-link {
-  display: inline-block;
-  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  margin-left: 10px;
   border: 1px solid var(--line);
   border-radius: 6px;
-  padding: 2px 8px;
+  padding: 2px 9px;
   font-family: Arial, sans-serif;
-  font-size: 0.86rem;
+  font-size: 0.82rem;
+  font-weight: 600;
   line-height: 1.4;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .download-link:hover,
@@ -124,8 +127,8 @@ a {
 }
 
 .content-page h1 {
-  margin: 0 0 16px;
-  font-size: clamp(2rem, 7vw, 3.25rem);
+  margin: 0 0 18px;
+  font-size: clamp(2.25rem, 6vw, 4.4rem);
   font-weight: 500;
   letter-spacing: 0;
 }
@@ -237,14 +240,19 @@ a {
 .detail-list,
 .publication-list {
   display: grid;
-  gap: 14px;
+  gap: 16px;
   margin: 0;
   padding-left: 22px;
 }
 
+.publication-list {
+  counter-reset: publication;
+  list-style: none;
+  padding-left: 0;
+}
+
 .timeline li,
-.detail-list li,
-.publication-list li {
+.detail-list li {
   padding-left: 6px;
 }
 
@@ -252,6 +260,27 @@ a {
 .publication-list li {
   font-size: 1.02rem;
   line-height: 1.65;
+}
+
+.publication-list li {
+  counter-increment: publication;
+  position: relative;
+  padding-left: 2.45rem;
+}
+
+.publication-list li::before {
+  content: counter(publication) ".";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1.75rem;
+  color: var(--ink);
+  font-weight: 700;
+  text-align: right;
+}
+
+.publication-list strong {
+  font-weight: 700;
 }
 
 .date {
