@@ -1,0 +1,266 @@
+:root {
+  color-scheme: light;
+  --background: #f7f5ef;
+  --ink: #1d2930;
+  --button: #1d2930;
+  --button-hover: #38505a;
+  --surface: #ffffff;
+  --line: #d9d2c3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: var(--ink);
+  background:
+    linear-gradient(120deg, rgba(145, 96, 61, 0.08), transparent 38%),
+    linear-gradient(300deg, rgba(36, 88, 106, 0.08), transparent 42%),
+    var(--background);
+}
+
+a {
+  color: inherit;
+}
+
+.home-page {
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.button-grid {
+  display: grid;
+  width: min(100%, 420px);
+  gap: 18px;
+}
+
+.nav-button {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(29, 41, 48, 0.16);
+  border-radius: 8px;
+  background: var(--button);
+  color: #ffffff;
+  font-size: clamp(1rem, 3.8vw, 1.15rem);
+  letter-spacing: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.nav-button:hover,
+.nav-button:focus-visible {
+  background: var(--button-hover);
+  box-shadow: 0 12px 28px rgba(29, 41, 48, 0.18);
+  transform: translateY(-2px);
+}
+
+.nav-button:focus-visible,
+.top-nav a:focus-visible {
+  outline: 3px solid rgba(74, 125, 145, 0.42);
+  outline-offset: 3px;
+}
+
+.page-header {
+  border-bottom: 1px solid var(--line);
+  background: rgba(247, 245, 239, 0.92);
+}
+
+.top-nav {
+  display: flex;
+  width: min(100%, 920px);
+  margin: 0 auto;
+  padding: 18px 24px;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.top-nav a {
+  border-radius: 8px;
+  padding: 10px 14px;
+  text-decoration: none;
+}
+
+.top-nav a:hover,
+.top-nav a.active {
+  background: var(--button);
+  color: #ffffff;
+}
+
+.content-page {
+  width: min(100%, 840px);
+  margin: 0 auto;
+  padding: 56px 24px;
+}
+
+.wide-page {
+  width: min(100%, 1040px);
+}
+
+.content-page h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 7vw, 3.25rem);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.content-page p {
+  max-width: 620px;
+  margin: 0;
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.profile-page {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  padding: 46px 24px 72px;
+}
+
+.profile-hero {
+  display: grid;
+  gap: 24px;
+  justify-items: center;
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.profile-copy {
+  min-width: 0;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #5f6f76;
+  font-family: Arial, sans-serif;
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.profile-copy h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2.5rem, 8vw, 5rem);
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.lead {
+  max-width: 680px;
+  margin: 0;
+  font-size: clamp(1.08rem, 3vw, 1.35rem);
+  line-height: 1.55;
+}
+
+.portrait-frame {
+  width: 210px;
+  height: 292px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 18px 40px rgba(29, 41, 48, 0.16);
+}
+
+.portrait-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-section,
+.cv-section {
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+
+.profile-section h2,
+.cv-section h2 {
+  margin: 0 0 14px;
+  font-size: 1.45rem;
+  font-weight: 600;
+  letter-spacing: 0;
+}
+
+.profile-section p,
+.cv-section li {
+  margin: 0 0 14px;
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+
+.profile-section p:last-child,
+.cv-section li:last-child {
+  margin-bottom: 0;
+}
+
+.contact-list a {
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+
+.timeline {
+  display: grid;
+  gap: 18px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.detail-list,
+.publication-list {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+  padding-left: 22px;
+}
+
+.timeline li,
+.detail-list li,
+.publication-list li {
+  padding-left: 6px;
+}
+
+.detail-list li,
+.publication-list li {
+  font-size: 1.02rem;
+  line-height: 1.65;
+}
+
+.date {
+  display: block;
+  margin-bottom: 4px;
+  font-family: Arial, sans-serif;
+  font-size: 0.94rem;
+  color: #5f6f76;
+}
+
+@media (max-width: 520px) {
+  .button-grid {
+    gap: 14px;
+  }
+
+  .nav-button {
+    min-height: 58px;
+  }
+}
+
+@media (max-width: 720px) {
+  .profile-hero {
+    gap: 28px;
+  }
+
+  .portrait-frame {
+    width: 180px;
+    height: 250px;
+  }
+}
