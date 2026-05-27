@@ -312,6 +312,49 @@ a {
   line-height: 1.6;
 }
 
+.student-section {
+  scroll-margin-top: 24px;
+}
+
+.student-list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+}
+
+.student-list div {
+  display: grid;
+  grid-template-columns: 86px minmax(0, 1fr);
+  gap: 16px;
+  align-items: baseline;
+  border-bottom: 1px solid rgba(217, 210, 195, 0.72);
+  padding: 0 0 12px;
+}
+
+.student-list div:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+.student-list dt {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 0.96rem;
+  font-weight: 700;
+  color: #5f6f76;
+}
+
+.student-list dd {
+  margin: 0;
+  font-size: 1.06rem;
+  line-height: 1.65;
+}
+
+.student-note {
+  color: #5f6f76;
+  font-size: 0.95em;
+}
+
 @media (max-width: 520px) {
   .button-grid {
     gap: 14px;
@@ -319,6 +362,11 @@ a {
 
   .nav-button {
     min-height: 58px;
+  }
+
+  .student-list div {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }
 
