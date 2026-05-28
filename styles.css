@@ -312,6 +312,32 @@ a {
   line-height: 1.6;
 }
 
+.paper-notice {
+  max-width: 760px;
+  margin: 0 0 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.paper-notice p {
+  max-width: none;
+  margin: 0 0 8px;
+  font-size: 0.98rem;
+  line-height: 1.55;
+}
+
+.paper-notice p:last-child {
+  margin-bottom: 0;
+}
+
+.paper-notice strong {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0;
+}
+
 .student-section {
   scroll-margin-top: 24px;
 }
