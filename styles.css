@@ -235,6 +235,25 @@ a {
   text-underline-offset: 4px;
 }
 
+.group-life-section {
+  padding-bottom: 34px;
+}
+
+.group-life-photo {
+  margin: 6px 0 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  box-shadow: 0 16px 34px rgba(29, 41, 48, 0.12);
+}
+
+.group-life-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .timeline {
   display: grid;
   gap: 18px;
