@@ -236,6 +236,18 @@ a {
   text-underline-offset: 4px;
 }
 
+.visitor-counter a {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.visitor-counter img {
+  display: block;
+  height: 22px;
+  width: auto;
+}
+
 .group-life-section {
   padding-bottom: 34px;
 }
